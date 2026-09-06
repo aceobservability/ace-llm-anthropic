@@ -267,7 +267,7 @@ func writeOpenAIDelta(w http.ResponseWriter, text string) error {
 		}},
 	}
 	payload, err := json.Marshal(chunk)
-		if err != nil {
+	if err != nil {
 		return err
 	}
 	_, err = fmt.Fprintf(w, "data: %s\n\n", payload)
